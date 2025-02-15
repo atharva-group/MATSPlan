@@ -5,10 +5,6 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-// Import necessary icons for the hamburger menu
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Roboto_Mono, Work_Sans } from 'next/font/google'
@@ -57,51 +53,6 @@ export default function MainPage() {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
-  };
-
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    projectType: '',
-    description: '',
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSelectChange = (value: string) => {
-    setFormData(prevData => ({ ...prevData, projectType: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        alert('Form submitted successfully!');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          projectType: '',
-          description: '',
-        });
-      } else {
-        alert('Error submitting form. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('Error submitting form. Please try again.');
-    }
   };
 
   return (
