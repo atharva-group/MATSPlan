@@ -26,10 +26,8 @@ jobs:
           npm config set legacy-peer-deps true
           npm ci
 
-      - name: Build and Export
-        run: |
-          npm run build
-          npm run export
+      - name: Build
+        run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: '/${{ github.event.repository.name }}'
 
