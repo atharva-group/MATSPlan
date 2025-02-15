@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm config set legacy-peer-deps true
+          npm install autoprefixer postcss tailwindcss --save-dev
           npm ci
 
       - name: Build
