@@ -30,10 +30,11 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: '/${{ github.event.repository.name }}'
-        
-      - name: list files
-        run: ls -la
+          NEXT_PUBLIC_BASE_PATH: ''
+
+      - name: Create CNAME file
+        run: echo "matsplan.com" > out/CNAME
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

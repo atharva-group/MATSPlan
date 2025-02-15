@@ -106,7 +106,7 @@ export default function MainPage() {
               {/* Right side image */}
               <div className="flex justify-center md:w-1/2 border-1 border-gray rounded-lg">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/banner.png`}
+                  src="/home/banner.png"
                   alt="Building interior structure"
                   width={600}
                   height={600}
@@ -131,7 +131,7 @@ export default function MainPage() {
               </div>
               <div className="w-full sm:w-1/2 flex justify-center">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/2.png`}
+                  src="/home/2.png"
                   alt="Industrial facility"
                   width={600}
                   height={600}
@@ -160,7 +160,7 @@ export default function MainPage() {
                 </div>
                 <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/est.png`}
+                    src="/home/est.png"
                     alt="Wireframe 3D model"
                     width={600}
                     height={600}
@@ -182,7 +182,7 @@ export default function MainPage() {
                 </div>
                 <div className="md:w-1/2 mt-8 md:mt-0">
                   <Image
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/1.png`}
+                    src="/home/1.png"
                     alt="Render vs BIM model"
                     width={600}
                     height={600}
@@ -213,7 +213,7 @@ export default function MainPage() {
               </div>
               <div className="w-full sm:w-1/2 flex justify-center">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/home/contact.png`}
+                  src="/home/contact.png"
                   alt="Contact us"
                   width={600}
                   height={600}
